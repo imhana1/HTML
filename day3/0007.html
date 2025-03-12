@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+    <style>
+        /* 전체, 태그, 클래스 아이디 (,가 붙으면 그리고 라는 뜻 ex. p, div) */
+
+        div, .bolck {
+            /* div 요소와 .block을 선택 */
+        }
+
+        div.block {
+            /* block 클래스를 가진 div */
+        }
+
+        .block div {
+            /* 하위 선택자 : block 내에 있는 div */
+            width: 200px;
+            background-color: rgb(162, 162, 241);
+            border: 1px solid black;
+        }
+
+        .inline span {
+            width : 190px;
+            background-color: darkgrey;
+            border: 1px solid black;
+            display: inline-block; /* 실제로 잘 쓰이진 않음 하지만 메뉴 만들 때 많이 씀 */
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <!-- block 요소는 위에서 아래로 : 한 줄에 하나씩 -->
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+    </div>
+    <div class="inline">
+        <!-- inline 요소는 좌에서 우로 : 내용의 너비만큼-->
+        <span>우리</span>
+        <span>나라</span>
+        <span>대한민국</span>
+    </div>
+</body>
+</html>

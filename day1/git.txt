@@ -1,0 +1,31 @@
+1. git은 버전관리 시스템
+    commit을 할 때 마다 버전이 1씩 올라감
+    작업중 실수 할 때 버전이 올라가면 버전관리가 어렵다
+    ex). login 담당자가 테스트를 위해 login.html까지 만든다음 실수로 html까지 commit
+    version 1. 로그인 구현
+    version 2. login.html 삭제
+    위와 같은 상황을 줄이기 위해 staging 영역이라는 임시작업영역을 도입
+
+2. git init
+    현재 폴더를 git 프로그램으로 관리하겠다
+
+3. git add와 git reset으로 스테이징 영역에 추가/삭제한다
+    실수를 해도 버전으로 남지 않는다
+
+4. git commit : 파일을 git으로 관리하겠다
+    한번에 git에 등록하는 것이 아니라 임시작업공간(staging) 영역이 있다
+    파일을 스테이징 영역에 add 할 수 있다
+
+5. 작업이 일단락되면 commit한다
+    git commit -m "작업내용" : 반드시 메시지를 남긴다
+
+6. 브랜치 이름을 main으로 변경
+    git의 기본 브랜치는 master, github는 main을 사용
+    git branch -M main
+
+7.  github 원격 저장소(기본이름:origin)을 등록
+    git remote add origin https://github.com/im-hana/2025.git
+
+8. 원격저장소에 push한다
+    -u 는 원격저장소 이름을 저장. 다음부터는 git push
+    git push -u origin main
